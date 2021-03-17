@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX = 8;
-
 void Insertion_sort_recursive(int *A,int a){
     if(a <=1 )return;
     Insertion_sort_recursive(A,a - 1);
@@ -29,3 +27,18 @@ int main(){
         printf("%d \n",arr[i] );
     return 0;
 }
+
+
+[PseudoCode]
+Insertion_sort_recursive(A,a)
+    if a <= 1
+        return
+    Insertion_sort_recursive(A, a-1)
+    key <- A[a-1]
+    j <- a - 2
+
+    while j >= 0 and A[j] > key
+        do A[j+1] <- A[i]
+           j <- j - 1
+    A[j + 1] = key
+    
