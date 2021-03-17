@@ -16,6 +16,7 @@ void Insertion_sort_recursive(int *A,int a){
     }
     A[j+1] = key;
 }
+
 int main(){
     int arr[8] = {7,9,2,5,3,0,6,1};
     int a = sizeof(arr) / sizeof(arr[0]);
