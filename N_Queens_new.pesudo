@@ -1,0 +1,32 @@
+isValid(i, j, board, N)
+   for (k = 1; k < j; k++)
+      if (board[i][k])
+         return false
+   for (k=i, l=j; k>=0 && l>=0; k--, l--)
+      if (board[k][l])
+         return false
+   for (k=i, l=j; k>=0 && k<N; k++, l--)
+      if (board[k][l])
+         return false
+   return true
+
+N-Queens_new(row, n, N, board)
+    if N == 0:
+        return true
+    for (j = 1; j<N+1; j++):
+        if isValid(row, j, board, N):
+            board[row][j] = 1
+            if N-Queens_new(row+1, n-1, N, board):
+                return true
+            board[row][j] = 0
+
+    if N-Queens_new == true:
+        for (k = 1; k < N+1; k++)
+            for (l = 1; l < N+1; l++)
+                if board[k][l] == true:
+                    print board[k][l]
+                else
+                    return false
+    return false
+
+        
